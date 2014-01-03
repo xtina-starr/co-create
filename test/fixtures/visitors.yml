@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ip_address: MyString
+  page_visits: 1
+  last_visit: MyString
+  mobile: false
+
+two:
+  ip_address: MyString
+  page_visits: 1
+  last_visit: MyString
+  mobile: false
