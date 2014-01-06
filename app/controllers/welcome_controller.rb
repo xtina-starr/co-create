@@ -5,8 +5,7 @@ class WelcomeController < ApplicationController
   end
 
   def update_visit_count
-    puts "************" 
-    puts current_visitor.update(page_visits: current_visitor.page_visits + 1, last_visit: Time.now)
+    current_visitor.update(page_visits: current_visitor.page_visits + 1, last_visit: Time.now)
   end
 
 

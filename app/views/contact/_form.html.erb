@@ -1,0 +1,15 @@
+<%= form_for @contact do |f| %>
+ <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :message %>
+    <%= f.password_field :message %>
+  </div>
+  <div class="actions"><%= f.submit %></div>
+<% end %>

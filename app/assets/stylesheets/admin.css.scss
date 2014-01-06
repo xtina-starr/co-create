@@ -1,0 +1,52 @@
+// Place all the styles related to the Admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+
+}
+
+div#admin {
+  width: auto;
+  margin: auto;
+  background-color: rgb(84, 188, 233);
+  height: 900px;
+  }
+
+h1#admin {
+  padding-top: 50px;
+  margin-bottom: 150px;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+table#total {
+  width: 300px;
+  border: 1px solid black;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 40px;
+} 
+
+table#total th {
+  text-transform: uppercase;
+  border-bottom: 2px solid black;
+} 
+
+table.other_visitor_data {
+  margin: auto;
+  width: 400px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+table.other_visitor_data th {
+  text-transform: uppercase;
+  border-bottom: 2px solid black;
+}
+
+table.other_visitor_data td {
+  background-color: #efefef;
+  border: 1px solid black;
+
+}

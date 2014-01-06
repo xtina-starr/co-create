@@ -1,3 +1,61 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div#part1 {
+  background: white;
+  height: 900px;
+  width: auto;}
+
+div.image-container {
+  text-align: center;}
+
+h1#home {
+  color: black;
+  text-align: center;
+  font-size: 80px;
+  font-family: 'Vast Shadow', arial;}
+
+img {
+  border: 4px solid white;}
+
+div#thinking {
+  color: rgb(87, 172, 242);
+  font-size: 40px;
+  text-align: center;
+  width: 120px;
+  position: absolute;
+  display: none;
+  margin-left: 300px;
+  margin-top: -330px;}
+
+div#hover {
+  width: 700px;
+  height: 650px;
+  margin: auto;
+  cursor: pointer;}
+
+div#hover:hover div#thinking {
+  display: block;}
+
+div#create-message {
+  font-size: 35px;
+  font-family: 'The Girl Next Door', cursive;
+  color: rgb(183, 217, 54);
+  position: absolute;
+  margin-left: 80px;
+  margin-top: -450px;
+  width: 250px;
+  display: none;
+}
+
+a {color: purple;
+  font-family: 'Lobster', cursive;
+  text-transform: uppercase;
+}
+
+div#part2 {
+  background: black;
+  height: 900px;
+  width: auto;
+  display: none;}

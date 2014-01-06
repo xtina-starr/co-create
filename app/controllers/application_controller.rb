@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_visitor
 
+
   def mobile_device?
     request.user_agent.downcase.include?("mobile")
   end

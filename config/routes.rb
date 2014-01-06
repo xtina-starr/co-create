@@ -1,6 +1,10 @@
 NSA::Application.routes.draw do
+  
+  get "/admin"   => 'admin#index'
   root 'welcome#index'
-  get '/welcome'      => 'welcome#index'
+  get '/contact' => 'contact#new'
+  post '/contact' => 'contact#create', as: 'contacts'
+
   
   # get '/visitor' => 'visitors#get_ip'
   # get '/visitor' => 'visitors#create_session'

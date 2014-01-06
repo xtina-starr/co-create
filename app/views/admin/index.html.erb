@@ -1,0 +1,39 @@
+<!-- route: Admin#index -->
+<!-- Find me in app/views/admin/index.html.erb -->
+
+<div id="admin">
+  <h1 id="admin">Admin Dashboard</h1>
+  <table id="total">
+    <tr>
+      <th>Total Visitors:</th>
+    </tr>
+    <tr>
+      <td><%= Visitor.total_visitors %></td>
+    </tr>
+  </table>
+
+
+  <table class="other_visitor_data">
+    <tr>
+      <th>Unique Visitors:</th>
+      <th>Returning Visitors:</th>
+    </tr>
+
+    <tr>
+      <td><%= Visitor.unique_visitors.count %></td>
+      <td><%= Visitor.return_visitors.count %></td>
+    </tr>
+  </table>
+
+  <table class="other_visitor_data">
+    <tr>
+      <th>Mobile Visitors:</th>
+      <th>Non-Mobile Visitors:</th>
+    </tr>
+
+    <tr>
+      <td><%= Visitor.mobile_users.count %></td>
+      <td><%= Visitor.non_mobile_users.count %></td>
+    </tr>
+  </table>
+</div>
