@@ -15,7 +15,11 @@
       <%= f.label :message %>
       <%= f.text_field :message %>
     </div>
-    <div class="actions"><%= f.submit "Submit" %></div>
+    <div class="actions">
+      <%= f.submit "Submit" %>
+      <%= link_to "Back", root_path, id: 'button' %>
+      <!-- input[type=submit] -->
+    </div>
   <% end %>
 </div>
 </div>
