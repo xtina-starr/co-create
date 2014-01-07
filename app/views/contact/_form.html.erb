@@ -1,15 +1,24 @@
-<%= form_for @contact do |f| %>
- <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :message %>
-    <%= f.password_field :message %>
-  </div>
-  <div class="actions"><%= f.submit %></div>
-<% end %>
+<div id="form">
+  <h1 id="create">Let's create together!</h1>
+  <h3 id='make'>Submit your contact information and project ideas and I will be sure to get back to you.</h3>
+  <%= form_for @contact  do |f| %>
+   <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </div>
+    <div class="field" id="message">
+      <%= f.label :message %>
+      <%= f.text_field :message %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Submit" %>
+      <%= link_to "Back", root_path, id: 'button' %>
+      <!-- input[type=submit] -->
+    </div>
+  <% end %>
+</div>
+</div>
