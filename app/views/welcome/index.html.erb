@@ -7,11 +7,14 @@
     <%= image_tag('ideas.jpg', :alt => "creative_ideas") %>
     <div id="thinking">Thinking of a master plan!</div>  
   </div>
-  <div id='create-message'>
+  <div id='create-message' class="switch">
     <p id='message'>
-      Do you like to create? Me too! Let's <a href="/contact">create</a> together!</div>
+      Do you like to create? Me too! Let's <a href="/contact">create</a> together!
     </p>
 </div>
 
-<div id="part2">
+<div id="part2" class="switch" style="display: none;">
+  <%= render 'contact/form' %>
 </div>
+
+<%= debug request.user_agent %>

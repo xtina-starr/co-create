@@ -25,7 +25,11 @@ div.field {
   margin-bottom: 20px;
 }
 
-div#message input {
+textarea#contact_message {
   width: 400px;
   height: 200px;
+}
+
+span#label {
+  vertical-align: top;
 }

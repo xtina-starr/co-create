@@ -2,6 +2,7 @@ class WelcomeController < ApplicationController
   before_action :update_visit_count
 
   def index
+    @contact = Contact.new
   end
 
   def update_visit_count

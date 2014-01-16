@@ -12,8 +12,8 @@
       <%= f.text_field :email %>
     </div>
     <div class="field" id="message">
-      <%= f.label :message %>
-      <%= f.text_field :message %>
+      <span id="label"> <%= f.label :message %></span>
+      <%= f.text_area :message %>
     </div>
     <div class="actions">
       <%= f.submit "Submit" %>

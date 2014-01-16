@@ -8,16 +8,33 @@ class ApplicationController < ActionController::Base
     @current_visitor ||= if session[:visitor_id]
       Visitor.find(session[:visitor_id])
     else
-      visitor = Visitor.create(ip_address: request.remote_ip, mobile: mobile_device?)
+      visitor = Visitor.create(ip_address: request.remote_ip, mobile: mobile_device?, country: get_ip(request.remote_ip), browser: browser_name)
       session[:visitor_id] = visitor.id
       visitor
     end
   end
   helper_method :current_visitor
 
+  def get_ip(ip)
+    HTTParty.get("http://freegeoip.net/json/#{ip}").parsed_response["country_name"]
+  end
+
 
   def mobile_device?
     request.user_agent.downcase.include?("mobile")
   end
   helper_method :mobile_device?
+
+
+  def browser_name
+    if request.user_agent.downcase.include?("firefox")
+      "firefox"
+    elsif request.user_agent.downcase.include?("gecko")
+      "safari"
+    elsif request.user_agent.downcase.include?("msie")
+      "internet explorer"
+    else
+      "unknown"
+    end 
+  end
 end

@@ -36,4 +36,16 @@
       <td><%= Visitor.non_mobile_users.count %></td>
     </tr>
   </table>
+
+  <table class="browser">
+    <tr>
+      <th>Mobile Visitors:</th>
+      <th>Non-Mobile Visitors:</th>
+    </tr>
+
+    <tr>
+      <td><%= Visitor.mobile_users.count %></td>
+      <td><%= Visitor.non_mobile_users.count %></td>
+    </tr>
+  </table>
 </div>

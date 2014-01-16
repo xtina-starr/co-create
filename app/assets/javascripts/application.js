@@ -20,4 +20,8 @@ $(document).ready(function(){
   $('#hover').click(function(){
     $('#create-message').fadeIn(5000);
   });
+  $('.display_form').click(function(){
+    //$(".switch").toggle()
+  });
 });
+

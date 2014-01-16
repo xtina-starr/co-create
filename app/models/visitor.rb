@@ -21,5 +21,9 @@ class Visitor < ActiveRecord::Base
   def self.total_visitors
     sum(:page_visits)
   end
+
+  def self.firefox_users
+    where(browser: firefox)
+  end
   
 end
