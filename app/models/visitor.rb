@@ -5,7 +5,7 @@ class Visitor < ActiveRecord::Base
   end
 
   def self.unique_visitors
-    where(page_visits: 1)
+    all
   end
   
 

@@ -5,11 +5,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def current_visitor
-    @current_visitor ||= if session[:visitor_id]
-      Visitor.find(session[:visitor_id])
+    @current_visitor ||= if cookies[:visitor_id]
+      Visitor.find(cookies[:visitor_id])
     else
       visitor = Visitor.create(ip_address: request.remote_ip, mobile: mobile_device?, country: get_ip(request.remote_ip), browser: browser_name)
-      session[:visitor_id] = visitor.id
+      cookies.permanent[:visitor_id] = visitor.id
       visitor
     end
   end
